@@ -1,38 +1,35 @@
 .App {
   text-align: center;
+  padding:0 3vw;
+  /* New */
+  background-color: whitesmoke;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* for the People Comp*/
+.peopleList {
+  display:flex;
+  flex-wrap:wrap;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.uCards {
+  display: inline-block;
+  margin: 2px;
+  transform: scale(0.8);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.peopleList > * {
+  flex: 180px;
 }
 
-.App-link {
-  color: #61dafb;
+.peopleListItem {
+  min-height:250px;
+  margin:1em;
+  padding-top:1em;
+  border:3px solid #ddd;
+  border-radius:15px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+p {
+  display: inline;
+  padding: 10px;
 }

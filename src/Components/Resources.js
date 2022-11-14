@@ -1,5 +1,6 @@
 import React from "react";
 import getData from '../util/getData';
+import { Card, Icon, Image } from 'semantic-ui-react'
 
 export default class Resources extends React.Component {
   constructor(props) {
@@ -27,18 +28,21 @@ export default class Resources extends React.Component {
 
     return (
       <div>
-        <div>
-          <h3>{resources.title}</h3>
-          <h5>{resources.subTitle}</h5>
-          <h3>{resources.studyAbroad.title}</h3>
-          <h5>{resources.studyAbroad.description}</h5>
-          {resources.studyAbroad.places.map((p) =>
-            <div>
-              <h3>{p.nameOfPlace}</h3>
-              <h5>{p.description}</h5>
-            </div>
-          )}
-        </div>
+        <h1>Current Student</h1>
+        <Card>
+          <Card.Content>
+          <Card.Header>{resources.title}</Card.Header>
+            <h5>{resources.subTitle}</h5>
+            <h3>{resources.studyAbroad.title}</h3>
+
+            {resources.studyAbroad.places.map((p) =>
+              <div>
+                <h3>{p.nameOfPlace}</h3>
+                <h5>{p.description}</h5>
+              </div>
+            )}
+          </Card.Content>
+        </Card>
 
         <div>
           <h3>{resources.studentServices.title}</h3>

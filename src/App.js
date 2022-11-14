@@ -10,6 +10,7 @@ import News from './Components/News'
 import Footer from './Components/Footer'
 import Map from './Components/Map';
 import './App.css';
+import 'semantic-ui-css/semantic.min.css'
 
 export default class App extends React.Component {
   //App.js->PeopleTabs(getData{people})->AllPeople{faculty,staff}->PeopleModal{individual}
@@ -57,7 +58,8 @@ export default class App extends React.Component {
         <div>
           <div>{about.quote}</div>
           <div>--{about.quoteAuthor}</div>
-        </div>
+        </div>        
+
         <hr/>
         <Degrees/>
         <hr/>
@@ -72,6 +74,7 @@ export default class App extends React.Component {
         <Resources/>
         <hr/>
         <Footer/>
+
         </div>
     )
   }

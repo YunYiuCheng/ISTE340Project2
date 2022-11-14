@@ -6,6 +6,7 @@ import Grid from '@mui/material/Grid';
 import Paper from '@mui/material/Paper';
 import Box from '@mui/material/Box';
 import { styled } from '@mui/material/styles';
+import EmploymentModal from "./EmploymentModal";
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -80,23 +81,46 @@ export default class Employment extends React.Component {
         <div>
           <h1>{employment.employers.title}</h1>
           {employment.employers.employerNames.map((p) =>
-            <p>{p}</p>
+            <div className="ecp">{p}</div>
           )}
         </div>
         <div>
           <h1>{employment.careers.title}</h1>
           {employment.careers.careerNames.map((p) =>
-            <p>
-              {p}
-            </p>
+            <div className="ecp">{p}</div>
           )}
         </div>
         <h1>Where Our Students Work</h1>
         <h3>To view employment and coop history of our students, click below.</h3>
+        <Box sx={{ flexGrow: 1 }}>
+          <Grid
+            container
+            columnSpacing={3}
+            direction="row"
+            justifyContent="center"
+            alignItems="center"
+          >
+            <Grid item xs={4}>
+              <Item>
+                <CardContent>
+                  <EmploymentModal {...employment.coopTable}/>
+                </CardContent>
+              </Item>
+            </Grid>
+            <Grid item xs={4}>
+              
+              <Item>
+                <CardContent>
+                  <EmploymentModal {...employment.employmentTable}/>
+                </CardContent>
+              </Item>
+            </Grid>
 
+          </Grid>
+        </Box>
       </div>
     )
-  }
 
+  }
 }
 

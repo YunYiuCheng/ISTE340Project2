@@ -12,16 +12,17 @@ export default class People extends React.Component {
 
   render() {
     const { people, title } = this.state;
-    const cName = "peopleListItem" + title;
     return (
       <div>
         <div>
           <h2>{title}</h2>
           <div className="peopleList">
             {people.map((p) =>
-              <div className={cName}>
-                <img src={p.imagePath} style={{ maxWidth: "150px" }} alt="person" />
-                <BasicModal {...p} />
+              <div className="peopleListItem">
+                <div>
+                  <img src={p.imagePath} style={{ maxWidth: "150px" }} alt="person" />
+                  <BasicModal {...p} />
+                </div>
               </div>
             )}
           </div>

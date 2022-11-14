@@ -11,12 +11,6 @@
   flex-wrap:wrap;
 }
 
-.uCards {
-  display: inline-block;
-  margin: 2px;
-  transform: scale(0.8);
-}
-
 .peopleList > * {
   flex: 180px;
 }
@@ -29,7 +23,7 @@
   border-radius:15px;
 }
 
-p {
+.ecp {
   display: inline;
   padding: 10px;
 }

@@ -57,7 +57,4 @@ export default class PeopleTabs extends React.Component {
             </div>
         );
     }
-
-    
-
 }

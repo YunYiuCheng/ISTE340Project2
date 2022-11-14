@@ -13,11 +13,11 @@ const style = {
   bgcolor: 'background.paper',
   border: '2px solid #000',
   boxShadow: 24,
-  p: 4,
+  p: 4
 };
 
-export default function BasicModal({username, name, tagline, imagePath, title, 
-    interestArea, office, website, phone, email, twitter, facebook}) {
+export default function BasicModal({ username, name, tagline, imagePath, title,
+  interestArea, office, website, phone, email, twitter, facebook }) {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
@@ -32,29 +32,46 @@ export default function BasicModal({username, name, tagline, imagePath, title,
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
-          <Typography id="modal-modal-title" variant="h3" component="h2">
+          <Typography id="modal-modal-title" variant="h4" component="h2">
             {name}
           </Typography>
-          <Typography id="modal-modal-title" variant="h5" component="h2">
+          <Typography id="modal-modal-title" variant="h6" component="h2">
             {tagline}
           </Typography>
-          <Typography id="modal-modal-title" variant="h3" component="h2">
+          <Typography id="modal-modal-title" variant="h6" component="h2">
             {title}
           </Typography>
-            <img src={imagePath} alt="my pic"/>
-            {website &&
-                <Typography sx={{ mt: 2 }}>
-                    <a href={website} target="_blank">Site!</a>
-                </Typography>
-            }
-            {office &&
-                <Typography sx={{ mt: 2 }}>
-                    Office: {office}
-                </Typography>
-            }
-          <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-            Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
-          </Typography>
+          <img src={imagePath} alt="my pic" />
+          {website &&
+            <Typography sx={{ mt: 2 }}>
+              <a href={website} target="_blank">Site!</a>
+            </Typography>
+          }
+          {office &&
+            <Typography sx={{ mt: 2 }}>
+              Office: {office}
+            </Typography>
+          }
+          {phone &&
+            <Typography sx={{ mt: 2 }}>
+              Phone: {phone}
+            </Typography>
+          }
+          {email &&
+            <Typography sx={{ mt: 2 }}>
+              Email: {email}
+            </Typography>
+          }
+          {twitter &&
+            <Typography sx={{ mt: 2 }}>
+              Twitter: {twitter}
+            </Typography>
+          }
+          {facebook &&
+            <Typography sx={{ mt: 2 }}>
+              Facebook: {facebook}
+            </Typography>
+          }
         </Box>
       </Modal>
     </div>
